@@ -39,7 +39,7 @@ const midRow = function (cardsDrawn, hideFirstCard = false) {
     if (i === 0 && hideFirstCard) {
       // background color before text on the same line
       process.stdout.write(`${chalk.bgGreen(" ")}`);
-      process.stdout.write(`${chalk.bgGreen(chalk.black("??"))}`);
+      process.stdout.write(`${chalk.bgGreen.black("??")}`);
       // background color after text on the same line
       process.stdout.write(`${chalk.bgGreen(" ")}`);
     } else {

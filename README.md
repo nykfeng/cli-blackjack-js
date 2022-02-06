@@ -13,16 +13,16 @@ This is a text based Blackjack game that allows a single player to play against 
 
 nanospinner, chalk, inquirer
 
-npm i chalk inquirer nanospinner
+`npm i chalk inquirer nanospinner`
 
 #### To Run
 
-node index.js
+`node index.js`
 
 ####
 
-![](images/screenshot1.png)
+![](screenshots/screenshot1.png)
 
-![](images/screenshot2.png)
+![](screenshots/screenshot2.png)
 
-![](images/screenshot3.png)
+![](screenshots/screenshot3.png)

@@ -13,18 +13,6 @@ async function askName() {
   return answers.player_name;
 }
 
-const anotherGame = async function() {
-    const answers = await inquirer.prompt({
-        name: "again",
-        type: "input",
-        message: "Would you like another game?",
-        default() {
-          return 0;
-        },
-      });
-      return answers.balance;
-}
-
 const startingBalance = async function () {
   const answers = await inquirer.prompt({
     name: "balance",

@@ -58,8 +58,6 @@ export default class GameSummary {
   }
 
   displayBalance() {
-    console.log(
-      `You have 💵 $${chalk.bgWhite(chalk.black(this.balance))} now!\n`
-    );
+    console.log(`You have 💵 $${chalk.bgWhite.black(this.balance)} now!\n`);
   }
 }
