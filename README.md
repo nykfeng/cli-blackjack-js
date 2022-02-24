@@ -11,15 +11,17 @@ This is a text based Blackjack game that allows a single player to play against 
 
 #### Packages used in this program
 
-nanospinner, chalk, inquirer
+nanospinner, chalk, inquirer, gradient, chalkAnimation, figlet   
 
-`npm i chalk inquirer nanospinner`
+`$npm i chalk inquirer nanospinner gradient chalkAnimation figlet`
 
 #### To Run
 
-`node index.js`
+`$node index.js`
 
 ####
+
+![](screenshots/screenshot.png)
 
 ![](screenshots/screenshot1.png)
 
