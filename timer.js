@@ -1,5 +1,5 @@
-const loader = async function () {
-  return new Promise((r) => setTimeout(r, 2000));
+const loader = async function (ms = 3000) {
+  return new Promise((r) => setTimeout(r, ms));
 };
 
 export default {

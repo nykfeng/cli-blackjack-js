@@ -25,14 +25,15 @@ export default class Blackjack {
   }
 
   async startGame() {
-    console.log("😃 Welcome to the Blackjack table~!");
+    // console.log("😃 Welcome to the Blackjack table~!");
+    await print.welcome();
     this.#playerName = await ask.askName();
     const balance = await ask.startingBalance();
 
     if (parseFloat(balance) > 0) {
       this.#balance = parseFloat(balance);
       this.#gameSummary = new GameSummary(this.#balance);
-      console.log(` - Hi ${this.#playerName}`);
+      console.log(`- Hi ${this.#playerName}`);
       console.log("🤑 🤑 Looks like you've got some money. Let's do it~!");
     } else if (parseFloat(balance) <= 0) {
       console.log(`💀💀💀 Lol, you are broke!`);
@@ -177,7 +178,7 @@ export default class Blackjack {
   }
 
   async drawPrompt() {
-    console.log("👀 Would you like to draw another card? 💰");
+    console.log("👀 Would you like a hit? 💰");
     const answer = await ask.yesOrNo();
     if (answer === "yes" || answer === "y") {
       return true;

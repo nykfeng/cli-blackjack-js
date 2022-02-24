@@ -1,4 +1,9 @@
 import chalk from "chalk";
+import figlet from "figlet";
+import gradient from "gradient-string";
+import timer from "./timer.js";
+import chalkAnimation from "chalk-animation";
+
 
 const firstRow = function (cardsDrawn, hideFirstCard = false) {
   cardsDrawn.forEach((card, i) => {
@@ -66,6 +71,27 @@ const hand = function (cardsDrawn, hideFirstCard) {
   thirdRow(cardsDrawn, hideFirstCard);
 };
 
+const welcome =  async function () {
+  figlet("Blackjack!!", function (err, data) {
+    if (err) {
+      console.log("Something went wrong...");
+      console.dir(err);
+      return;
+    }
+    console.log(gradient.pastel.multiline(data) + "\n");
+  });
+
+  await timer.loader(100);
+
+  const welcomeTitle = chalkAnimation.karaoke(
+    "😃 Welcome to the Blackjack ♠J table~! \n"
+  );
+
+  await timer.loader();
+  welcomeTitle.stop();
+};
+
 export default {
   hand,
+  welcome
 };
